@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact VIBE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">VIBE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <div class="divider"></div>
+
+  <section class="hero alt-gray">
+    <h1>Contact VIBE</h1>
+    <p>We’ll have a form here once email is fully set up. In the meantime, use the details below.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="alt-white" style="max-width:800px;">
+    <h2>Get in touch</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+      <strong>Name:</strong> Jimmy Atkins<br/>
+      <strong>Email:</strong> <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a><br/>
+      <strong>Phone:</strong> <a href="tel:+14236536235">423-653-6235</a>
+    </p>
+    <p style="text-align:center; max-width:700px; margin:0 auto;">
+      If you’d like, include your organization, website, and what you need from VIBE in your email.
+    </p>
+  </section>
+
+  <footer>
+    <div class="logo">VIBE</div>
+    © 2025 VIBE — Volunteer Independent Business Exchange · <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
+  </footer>
+
+  <script>
+    const dividers = document.querySelectorAll('.divider');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('hidden');
+        } else {
+          entry.target.classList.add('hidden');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    dividers.forEach(div => {
+      div.classList.add('hidden');
+      observer.observe(div);
+    });
+  </script>
+</body>
+</html>

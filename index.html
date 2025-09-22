@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIBE | Volunteer Independent Business Exchange</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">VIBE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <div class="divider"></div>
+
+  <section class="hero alt-gray">
+    <h1>Volunteer Independent Business Exchange</h1>
+    <p>Your independent partner for sales, strategy, and growth.</p>
+    <a href="contact.html" class="cta">Contact VIBE</a>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="alt-white">
+    <h2>What is VIBE?</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+      At VIBE, we represent brands, connect businesses, and consult with companies to solve unique challenges. Our focus is on building mutually beneficial B2B relationships that drive measurable growth.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="alt-gray">
+    <h2>Who We Help</h2>
+    <div class="grid">
+      <div class="card">Manufacturers</div>
+      <div class="card">Startups</div>
+      <div class="card">Local Businesses</div>
+      <div class="card">Independent Reps</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="alt-white" id="join">
+    <h2>Contact Us</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+      Interested in working with us or learning more? Let’s connect and explore how VIBE can help you grow.
+    </p>
+    <div style="text-align:center;">
+      <a href="mailto:jimmy@vib.exchange" class="cta">Email VIBE</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo">VIBE</div>
+    © 2025 VIBE — Volunteer Independent Business Exchange · <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
+  </footer>
+
+  <script>
+    const dividers = document.querySelectorAll('.divider');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('hidden');
+        } else {
+          entry.target.classList.add('hidden');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    dividers.forEach(div => {
+      div.classList.add('hidden');
+      observer.observe(div);
+    });
+  </script>
+</body>
+</html>

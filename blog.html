@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIBE Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">VIBE</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <div class="divider"></div>
+
+  <section class="hero alt-gray" style="min-height:40vh;">
+    <h1>Blog</h1>
+    <p>Coming Soon</p>
+  </section>
+
+  <footer>
+    <div class="logo">VIBE</div>
+    © 2025 VIBE — Volunteer Independent Business Exchange · <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
+  </footer>
+
+  <script>
+    const dividers = document.querySelectorAll('.divider');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('hidden');
+        } else {
+          entry.target.classList.add('hidden');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    dividers.forEach(div => {
+      div.classList.add('hidden');
+      observer.observe(div);
+    });
+  </script>
+</body>
+</html>
