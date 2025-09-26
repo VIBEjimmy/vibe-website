@@ -3,12 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VIBE Blog</title>
+  <title>VIBE Blog | Volunteer Independent Business Exchange</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    :root {
+      --orange: #ff8200;
+      --gray: #4B4B4B;
+      --white: #fff;
+      --light-gray: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--gray);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background: var(--gray);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--orange);
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    nav a:hover { color: var(--orange); }
+
+    .divider {
+      height: 6px;
+      background: var(--orange);
+      width: 100%;
+      transform-origin: left;
+      transition: transform 0.8s ease-out;
+    }
+    .divider.hidden { transform: scaleX(0); }
+
+    section.alt-gray {
+      background: var(--gray);
+      color: var(--white);
+      width: 100%;
+    }
+    section.alt-white {
+      background: var(--white);
+      color: var(--gray);
+      width: 100%;
+    }
+    section .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 2rem;
+      color: var(--orange);
+    }
+
+    /* Blog posts */
+    .posts {
+      display: grid;
+      gap: 2rem;
+    }
+    .post {
+      background: var(--light-gray);
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    .alt-gray .post { background: var(--white); color: var(--gray); }
+    .post h3 {
+      margin-top: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+    }
+    .post h3 a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .post h3 a:hover { text-decoration: underline; }
+    .post .date {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+    .post p {
+      margin: 0.5rem 0 1rem;
+    }
+    .post a.read-more {
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .post a.read-more:hover { text-decoration: underline; }
+
+    footer {
+      background: var(--gray);
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
-
   <header>
     <div class="logo">VIBE</div>
     <nav>
@@ -17,11 +141,16 @@
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
+
   <div class="divider"></div>
 
-  <section class="hero alt-gray" style="min-height:40vh;">
-    <h1>Blog</h1>
-    <p>Coming Soon</p>
+  <section class="alt-white">
+    <div class="content">
+      <h2>VIBE Blog</h2>
+      <div class="posts" id="blog-posts">
+        <p>Loading latest posts...</p>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -30,21 +159,30 @@
   </footer>
 
   <script>
-    const dividers = document.querySelectorAll('.divider');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('hidden');
-        } else {
-          entry.target.classList.add('hidden');
-        }
-      });
-    }, { threshold: 0.1 });
+    async function loadMediumPosts() {
+      const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@VIBE_jimmy";
+      try {
+        const res = await fetch(feedUrl);
+        const data = await res.json();
+        const container = document.getElementById("blog-posts");
+        container.innerHTML = "";
 
-    dividers.forEach(div => {
-      div.classList.add('hidden');
-      observer.observe(div);
-    });
+        data.items.slice(0, 5).forEach(post => {
+          const div = document.createElement("div");
+          div.classList.add("post");
+          div.innerHTML = `
+            <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
+            <div class="date">${new Date(post.pubDate).toDateString()}</div>
+            <p>${post.description.replace(/<[^>]*>?/gm, '').slice(0, 200)}...</p>
+            <a href="${post.link}" class="read-more" target="_blank">Read More →</a>
+          `;
+          container.appendChild(div);
+        });
+      } catch (error) {
+        document.getElementById("blog-posts").innerHTML = "<p>Unable to load posts right now.</p>";
+      }
+    }
+    loadMediumPosts();
   </script>
 </body>
 </html>
