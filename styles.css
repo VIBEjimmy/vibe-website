@@ -50,11 +50,16 @@ nav a:hover {
   color: var(--orange);
 }
 
-/* Divider */
+/* Sliding Dividers */
 .divider {
   height: 6px;
   background: var(--orange);
   width: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+}
+.divider.hidden {
+  transform: translateX(-100%);
 }
 
 /* Sections */
@@ -63,11 +68,23 @@ section.alt-gray {
   color: var(--white);
   width: 100%;
 }
+section.alt-gray p,
+section.alt-gray h1,
+section.alt-gray h2 {
+  color: var(--white);
+}
+
 section.alt-white {
   background: var(--white);
   color: var(--gray);
   width: 100%;
 }
+section.alt-white p,
+section.alt-white h1,
+section.alt-white h2 {
+  color: var(--gray);
+}
+
 section .content {
   max-width: 1100px;
   margin: 0 auto;
@@ -123,13 +140,13 @@ section h2 {
   background: var(--light-gray);
   border-radius: 12px;
   transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
-  color: var(--gray);   /* Text is always dark gray */
+  color: var(--gray);   /* Always dark gray text */
   border: 2px solid transparent;
   cursor: pointer;
 }
 .card:hover {
   transform: translateY(-4px);
-  background: #eaeaea;  /* Slightly darker than light-gray */
+  background: #eaeaea;
   border: 2px solid var(--orange);
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -143,7 +160,15 @@ section h2 {
   background: var(--light-gray);
   padding: 1.5rem;
   border-radius: 10px;
-  color: var(--gray);   /* Ensure previews are dark gray */
+  color: var(--gray);
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+}
+.post:hover {
+  transform: translateY(-4px);
+  background: #eaeaea;
+  border: 2px solid var(--orange);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .post h3 {
   margin-top: 0;

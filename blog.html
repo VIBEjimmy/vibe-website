@@ -36,7 +36,7 @@
 
   <div class="divider"></div>
 
-  <!-- Blog Intro (White) -->
+  <!-- Blog Intro -->
   <section class="alt-white">
     <div class="content">
       <h2>VIBE Blog</h2>
@@ -47,7 +47,9 @@
     </div>
   </section>
 
-  <!-- Blog Posts (Gray) -->
+  <div class="divider"></div>
+
+  <!-- Blog Posts -->
   <section class="alt-gray">
     <div class="content">
       <div class="posts">
@@ -80,7 +82,9 @@
     </div>
   </section>
 
-  <!-- Button Section (White) -->
+  <div class="divider"></div>
+
+  <!-- More Posts -->
   <section class="alt-white">
     <div class="content more-posts">
       <a href="https://medium.com/@VIBE_jimmy" target="_blank">Read More on Medium →</a>
@@ -92,5 +96,20 @@
     © 2025 VIBE — Volunteer Independent Business Exchange · 
     <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
   </footer>
+
+  <!-- Sliding Divider Script -->
+  <script>
+    const dividers = document.querySelectorAll('.divider');
+    window.addEventListener('scroll', () => {
+      dividers.forEach(div => {
+        const rect = div.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          div.classList.add('hidden');
+        } else {
+          div.classList.remove('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

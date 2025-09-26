@@ -36,7 +36,7 @@
 
   <div class="divider"></div>
 
-  <!-- Intro Section (Gray) -->
+  <!-- Intro -->
   <section class="alt-gray">
     <div class="content" style="text-align:center;">
       <h2>Contact VIBE</h2>
@@ -44,7 +44,9 @@
     </div>
   </section>
 
-  <!-- Contact Details (White) -->
+  <div class="divider"></div>
+
+  <!-- Contact Details -->
   <section class="alt-white">
     <div class="content" style="text-align:center;">
       <h2>Get in Touch</h2>
@@ -61,5 +63,20 @@
     © 2025 VIBE — Volunteer Independent Business Exchange · 
     <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
   </footer>
+
+  <!-- Sliding Divider Script -->
+  <script>
+    const dividers = document.querySelectorAll('.divider');
+    window.addEventListener('scroll', () => {
+      dividers.forEach(div => {
+        const rect = div.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          div.classList.add('hidden');
+        } else {
+          div.classList.remove('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
