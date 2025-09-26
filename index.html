@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VIBE | Volunteer Independent Business Exchange</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
   <style>
     :root {
       --orange: #ff8200;
@@ -60,11 +59,19 @@
     }
     .divider.hidden { transform: scaleX(0); }
 
-    /* Section backgrounds full width */
-    section.alt-gray,
-    section.alt-white {
+    /* Section background full width */
+    section.alt-gray {
+      background: var(--gray);
+      color: var(--white);
       width: 100%;
     }
+    section.alt-white {
+      background: var(--white);
+      color: var(--gray);
+      width: 100%;
+    }
+
+    /* Content stays centered */
     section .content {
       max-width: 1100px;
       margin: 0 auto;
@@ -83,10 +90,6 @@
       font-size: 1rem;
       line-height: 1.7;
     }
-
-    .alt-gray { background: var(--gray); color: var(--white); }
-    .alt-gray p { color: var(--white); }
-    .alt-white { background: var(--white); color: var(--gray); }
 
     /* Hero */
     .hero {
