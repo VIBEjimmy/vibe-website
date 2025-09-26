@@ -178,12 +178,12 @@
 
   <script>
     async function loadMediumPosts() {
-      const feedUrl = "https://medium.com/feed/@VIBE_jimmy";
+      const feedUrl = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://medium.com/feed/@VIBE_jimmy");
       try {
         const res = await fetch(feedUrl);
-        const text = await res.text();
+        const data = await res.json();
         const parser = new DOMParser();
-        const xml = parser.parseFromString(text, "application/xml");
+        const xml = parser.parseFromString(data.contents, "application/xml");
 
         const items = xml.querySelectorAll("item");
         const container = document.getElementById("blog-posts");
