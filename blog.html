@@ -10,6 +10,7 @@
       --orange: #ff8200;
       --gray: #4B4B4B;
       --white: #fff;
+      --light-gray: #f5f5f5;
     }
 
     body {
@@ -73,10 +74,60 @@
       color: var(--orange);
     }
 
-    iframe {
-      width: 100%;
-      min-height: 1000px;
-      border: none;
+    /* Blog posts */
+    .posts {
+      display: grid;
+      gap: 2rem;
+    }
+    .post {
+      background: var(--light-gray);
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    .post h3 {
+      margin-top: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+    }
+    .post h3 a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .post h3 a:hover { text-decoration: underline; }
+    .post .date {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+    .post p {
+      margin: 0.5rem 0 1rem;
+    }
+    .post a.read-more {
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .post a.read-more:hover { text-decoration: underline; }
+
+    /* Button to Medium */
+    .more-posts {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .more-posts a {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .more-posts a:hover {
+      background: #e46f00;
+      transform: scale(1.05);
     }
 
     footer {
@@ -108,7 +159,29 @@
   <section class="alt-white">
     <div class="content">
       <h2>VIBE Blog</h2>
-      <iframe src="https://medium.com/@VIBE_jimmy/latest" title="VIBE Blog on Medium"></iframe>
+      <div class="posts">
+        
+
+        <!-- Post 2 -->
+        <div class="post">
+          <h3><a href="https://medium.com/@VIBE_jimmy/behind-the-glass-lessons-from-13-years-in-bottle-decoration-dbf16d4f2fbd" target="_blank">Behind the Glass: Lessons from 13 Years in Bottle Decoration</a></h3>
+          <div class="date">Sept 26, 2025</div>
+          <p>When I first stepped into the world of glass bottle decoration, it was not by design. A large local company had just invested in a high-end press and needed someone willing to dive in, learn the machine, and figure out how to make it perform. I was immediately intrigued by the challenge: decorating glass bottles of all shapes and sizes, pushing the limits of what is possible, and seeing the results take form in something people would eventually hold in their hands...</p>
+          <a href="https://medium.com/@VIBE_jimmy/behind-the-glass-lessons-from-13-years-in-bottle-decoration-dbf16d4f2fbd" class="read-more" target="_blank">Read More →</a>
+        </div>
+
+        <!-- Post 1 -->
+        <div class="post">
+          <h3><a href="https://medium.com/@VIBE_jimmy/im-jimmy-b8bfb6d9c81b" target="_blank">I’m Jimmy.</a></h3>
+          <div class="date">Spet 26, 2025</div>
+          <p>Hi, I’m Jimmy. I’ve always had a maker’s mindset. From the beginning, I was fascinated with how things fit together, how small details could change an entire process, and how creativity could be channeled into something both useful and beautiful. That curiosity led me..</p>
+          <a href="hhttps://medium.com/@VIBE_jimmy/im-jimmy-b8bfb6d9c81b" class="read-more" target="_blank">Read More →</a>
+        </div>
+
+      </div>
+      <div class="more-posts">
+        <a href="https://medium.com/@VIBE_jimmy" target="_blank">Read More on Medium →</a>
+      </div>
     </div>
   </section>
 
