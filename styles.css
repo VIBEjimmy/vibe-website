@@ -122,10 +122,16 @@ section h2 {
   padding: 2rem;
   background: var(--light-gray);
   border-radius: 12px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+  color: var(--gray);   /* Text is always dark gray */
+  border: 2px solid transparent;
+  cursor: pointer;
 }
 .card:hover {
   transform: translateY(-4px);
+  background: #eaeaea;  /* Slightly darker than light-gray */
+  border: 2px solid var(--orange);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Blog posts */
@@ -137,6 +143,7 @@ section h2 {
   background: var(--light-gray);
   padding: 1.5rem;
   border-radius: 10px;
+  color: var(--gray);   /* Ensure previews are dark gray */
 }
 .post h3 {
   margin-top: 0;
@@ -157,6 +164,7 @@ section h2 {
 }
 .post p {
   margin: 0.5rem 0 1rem;
+  color: var(--gray);   /* Always readable */
 }
 .post a.read-more {
   font-weight: 600;
