@@ -108,6 +108,7 @@ section h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: var(--orange) !important;   /* Force hero title orange */
 }
 .hero p {
   font-size: 1.25rem;
@@ -237,4 +238,9 @@ footer a {
   color: var(--orange);
   text-decoration: none;
   font-weight: 600;
+}
+
+/* Contact Intro Title (alt-gray) */
+section.alt-gray h2 {
+  color: var(--orange) !important;   /* Force Contact VIBE orange */
 }
