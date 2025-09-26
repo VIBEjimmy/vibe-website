@@ -4,174 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VIBE | Volunteer Independent Business Exchange</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --orange: #ff8200;
-      --gray: #4B4B4B;
-      --white: #fff;
-      --light-gray: #f5f5f5;
-    }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--gray);
-    }
+  <!-- SEO Meta -->
+  <meta name="description" content="VIBE — Volunteer Independent Business Exchange. Your independent partner for sales, strategy, and growth.">
+  <meta name="keywords" content="VIBE, business exchange, sales consulting, B2B growth, Chattanooga, strategy">
+  <meta name="author" content="Jimmy Atkins">
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      background: var(--gray);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 1.6rem;
-      color: var(--orange);
-    }
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--white);
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--orange); }
+  <!-- Open Graph -->
+  <meta property="og:title" content="VIBE | Volunteer Independent Business Exchange">
+  <meta property="og:description" content="Your independent partner for sales, strategy, and growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vib.exchange">
+  <meta property="og:image" content="https://vib.exchange/favicon.png">
 
-    /* Divider bar */
-    .divider {
-      height: 6px;
-      background: var(--orange);
-      width: 100%;
-      transform-origin: left;
-      transition: transform 0.8s ease-out;
-    }
-    .divider.hidden { transform: scaleX(0); }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    /* Section background full width */
-    section.alt-gray {
-      background: var(--gray);
-      color: var(--white);
-      width: 100%;
-    }
-    section.alt-white {
-      background: var(--white);
-      color: var(--gray);
-      width: 100%;
-    }
-
-    /* Content stays centered */
-    section .content {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 2rem;
-      color: var(--orange);
-    }
-    section p {
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 6rem 1.5rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
-      color: var(--orange);
-    }
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-
-    .cta {
-      background: var(--orange);
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .cta:hover {
-      background: #e46f00;
-      transform: scale(1.05);
-    }
-
-    /* Grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
-    }
-    .card {
-      padding: 1.5rem;
-      border-radius: 12px;
-      transition: transform 0.2s ease;
-    }
-    .alt-white .card { background: var(--light-gray); color: var(--gray); }
-    .alt-gray .card { background: var(--white); color: var(--gray); }
-    .card:hover { transform: translateY(-4px); }
-
-    footer {
-      background: var(--gray);
-      color: var(--white);
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.85rem;
-    }
-    footer a {
-      color: var(--orange);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
-      nav { margin-top: 0.5rem; gap: 1rem; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-    }
-    @media (max-width: 480px) {
-      .hero { padding: 4rem 1rem; }
-      .hero h1 { font-size: 1.6rem; }
-      .hero p { font-size: 0.95rem; }
-      .cta { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
-    }
-  </style>
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <div class="logo">VIBE</div>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
@@ -180,28 +36,27 @@
 
   <div class="divider"></div>
 
-  <section class="alt-gray">
-    <div class="content hero">
+  <!-- Hero (Gray background with white tagline) -->
+  <section class="alt-gray hero">
+    <div class="content">
       <h1>Volunteer Independent Business Exchange</h1>
       <p>Your independent partner for sales, strategy, and growth.</p>
       <a href="contact.html" class="cta">Contact VIBE</a>
     </div>
   </section>
 
-  <div class="divider"></div>
-
+  <!-- About Section (White) -->
   <section class="alt-white">
     <div class="content">
       <h2>What is VIBE?</h2>
-      <p style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+      <p style="text-align:center; max-width:700px; margin:0 auto;">
         At VIBE, we represent brands, connect businesses, and consult with companies to solve unique challenges. 
         Our focus is on building mutually beneficial B2B relationships that drive measurable growth.
       </p>
     </div>
   </section>
 
-  <div class="divider"></div>
-
+  <!-- Who We Help (Gray) -->
   <section class="alt-gray">
     <div class="content">
       <h2>Who We Help</h2>
@@ -214,41 +69,21 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
+  <!-- Call to Action (White) -->
   <section class="alt-white">
-    <div class="content">
-      <h2>Contact Us</h2>
-      <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+    <div class="content" style="text-align:center;">
+      <h2>Work With VIBE</h2>
+      <p style="max-width:700px; margin:0 auto 2rem;">
         Interested in working with us or learning more? Let’s connect and explore how VIBE can help you grow.
       </p>
-      <div style="text-align:center;">
-        <a href="mailto:jimmy@vib.exchange" class="cta">Email VIBE</a>
-      </div>
+      <a href="contact.html" class="cta">Contact VIBE</a>
     </div>
   </section>
 
   <footer>
     <div class="logo">VIBE</div>
-    © 2025 VIBE — Volunteer Independent Business Exchange · <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
+    © 2025 VIBE — Volunteer Independent Business Exchange · 
+    <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
   </footer>
-
-  <script>
-    const dividers = document.querySelectorAll('.divider');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('hidden');
-        } else {
-          entry.target.classList.add('hidden');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    dividers.forEach(div => {
-      div.classList.add('hidden');
-      observer.observe(div);
-    });
-  </script>
 </body>
 </html>

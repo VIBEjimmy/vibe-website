@@ -4,150 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VIBE Blog | Volunteer Independent Business Exchange</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --orange: #ff8200;
-      --gray: #4B4B4B;
-      --white: #fff;
-      --light-gray: #f5f5f5;
-    }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--gray);
-    }
+  <!-- SEO Meta -->
+  <meta name="description" content="The VIBE Blog — insights on business growth, sales, and strategy.">
+  <meta name="keywords" content="VIBE blog, business growth, sales consulting, B2B strategy">
+  <meta name="author" content="Jimmy Atkins">
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      background: var(--gray);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: var(--orange);
-    }
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--white);
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--orange); }
+  <!-- Open Graph -->
+  <meta property="og:title" content="VIBE Blog | Volunteer Independent Business Exchange">
+  <meta property="og:description" content="Read the latest insights from VIBE on sales, strategy, and business growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vib.exchange/blog.html">
+  <meta property="og:image" content="https://vib.exchange/favicon.png">
 
-    .divider {
-      height: 6px;
-      background: var(--orange);
-      width: 100%;
-    }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    section.alt-white {
-      background: var(--white);
-      color: var(--gray);
-      width: 100%;
-    }
-    section .content {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 2rem;
-      color: var(--orange);
-    }
-
-    /* Blog posts */
-    .posts {
-      display: grid;
-      gap: 2rem;
-    }
-    .post {
-      background: var(--light-gray);
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-    .post h3 {
-      margin-top: 0;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.3rem;
-    }
-    .post h3 a {
-      color: var(--orange);
-      text-decoration: none;
-    }
-    .post h3 a:hover { text-decoration: underline; }
-    .post .date {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 0.5rem;
-    }
-    .post p {
-      margin: 0.5rem 0 1rem;
-    }
-    .post a.read-more {
-      font-weight: 600;
-      color: var(--orange);
-      text-decoration: none;
-    }
-    .post a.read-more:hover { text-decoration: underline; }
-
-    /* Button to Medium */
-    .more-posts {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .more-posts a {
-      display: inline-block;
-      background: var(--orange);
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .more-posts a:hover {
-      background: #e46f00;
-      transform: scale(1.05);
-    }
-
-    footer {
-      background: var(--gray);
-      color: var(--white);
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.85rem;
-    }
-    footer a {
-      color: var(--orange);
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <div class="logo">VIBE</div>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
@@ -156,38 +36,61 @@
 
   <div class="divider"></div>
 
+  <!-- Blog Intro (White) -->
   <section class="alt-white">
     <div class="content">
       <h2>VIBE Blog</h2>
-      <div class="posts">
-        
+      <p style="text-align:center; max-width:700px; margin:0 auto;">
+        Stay updated with insights, strategies, and stories from VIBE. 
+        We share what we’re learning in sales, B2B growth, and independent business representation.
+      </p>
+    </div>
+  </section>
 
-        <!-- Post 2 -->
-        <div class="post">
-          <h3><a href="https://medium.com/@VIBE_jimmy/behind-the-glass-lessons-from-13-years-in-bottle-decoration-dbf16d4f2fbd" target="_blank">Behind the Glass: Lessons from 13 Years in Bottle Decoration</a></h3>
-          <div class="date">Sept 26, 2025</div>
-          <p>When I first stepped into the world of glass bottle decoration, it was not by design. A large local company had just invested in a high-end press and needed someone willing to dive in, learn the machine, and figure out how to make it perform. I was immediately intrigued by the challenge: decorating glass bottles of all shapes and sizes, pushing the limits of what is possible, and seeing the results take form in something people would eventually hold in their hands...</p>
-          <a href="https://medium.com/@VIBE_jimmy/behind-the-glass-lessons-from-13-years-in-bottle-decoration-dbf16d4f2fbd" class="read-more" target="_blank">Read More →</a>
-        </div>
+  <!-- Blog Posts (Gray) -->
+  <section class="alt-gray">
+    <div class="content">
+      <div class="posts">
 
         <!-- Post 1 -->
         <div class="post">
-          <h3><a href="https://medium.com/@VIBE_jimmy/im-jimmy-b8bfb6d9c81b" target="_blank">I’m Jimmy.</a></h3>
-          <div class="date">Spet 26, 2025</div>
-          <p>Hi, I’m Jimmy. I’ve always had a maker’s mindset. From the beginning, I was fascinated with how things fit together, how small details could change an entire process, and how creativity could be channeled into something both useful and beautiful. That curiosity led me..</p>
-          <a href="https://medium.com/@VIBE_jimmy/im-jimmy-b8bfb6d9c81b" class="read-more" target="_blank">Read More →</a>
+          <h3><a href="https://medium.com/@VIBE_jimmy/your-first-post" target="_blank">Your First Blog Post Title</a></h3>
+          <div class="date">Jan 20, 2025</div>
+          <p>Short preview of your blog post goes here... just 2–3 sentences to give readers a taste.</p>
+          <a href="https://medium.com/@VIBE_jimmy/your-first-post" class="read-more" target="_blank">Read More →</a>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+          <h3><a href="https://medium.com/@VIBE_jimmy/your-second-post" target="_blank">Your Second Blog Post Title</a></h3>
+          <div class="date">Feb 5, 2025</div>
+          <p>Another short preview goes here... highlight what makes this post worth clicking.</p>
+          <a href="https://medium.com/@VIBE_jimmy/your-second-post" class="read-more" target="_blank">Read More →</a>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post">
+          <h3><a href="https://medium.com/@VIBE_jimmy/your-third-post" target="_blank">Your Third Blog Post Title</a></h3>
+          <div class="date">Feb 10, 2025</div>
+          <p>One more preview... keep them short and snappy to pull people in.</p>
+          <a href="https://medium.com/@VIBE_jimmy/your-third-post" class="read-more" target="_blank">Read More →</a>
         </div>
 
       </div>
-      <div class="more-posts">
-        <a href="https://medium.com/@VIBE_jimmy" target="_blank">Read More on Medium →</a>
-      </div>
+    </div>
+  </section>
+
+  <!-- Button Section (White) -->
+  <section class="alt-white">
+    <div class="content more-posts">
+      <a href="https://medium.com/@VIBE_jimmy" target="_blank">Read More on Medium →</a>
     </div>
   </section>
 
   <footer>
     <div class="logo">VIBE</div>
-    © 2025 VIBE — Volunteer Independent Business Exchange · <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
+    © 2025 VIBE — Volunteer Independent Business Exchange · 
+    <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
   </footer>
 </body>
 </html>
