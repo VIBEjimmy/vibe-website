@@ -10,7 +10,7 @@ Static site for the **Volunteer Independent Business Exchange (VIBE)**.
 
 ## Pages
 - `index.html` — Homepage  
-- `blog.html` — Blog (**Coming Soon**)  
+- `blog.html` — Blog  
 - `contact.html` — Contact page with direct email/phone  
 
 ## Brand Colors
