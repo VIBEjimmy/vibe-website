@@ -160,24 +160,22 @@ section h2 {
   background: var(--light-gray);
   padding: 1.5rem;
   border-radius: 10px;
-  color: var(--gray) !important;   /* Force dark gray text */
   border: 2px solid transparent;
   transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+
+  /* FORCE all text to dark gray */
+  color: var(--gray) !important;
 }
-.post:hover {
-  transform: translateY(-4px);
-  background: #eaeaea;
-  border: 2px solid var(--orange);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.post * {
+  color: var(--gray) !important;   /* Override ALL children */
 }
 .post h3 {
   margin-top: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
-  color: var(--orange);
 }
 .post h3 a {
-  color: var(--orange);
+  color: var(--orange) !important;
   text-decoration: none;
 }
 .post h3 a:hover {
@@ -185,16 +183,21 @@ section h2 {
 }
 .post .date {
   font-size: 0.9rem;
-  color: #777 !important;   /* Force lighter gray for date */
+  color: #777 !important;
   margin-bottom: 0.5rem;
+}
+.post:hover {
+  transform: translateY(-4px);
+  background: #eaeaea;
+  border: 2px solid var(--orange);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .post p {
   margin: 0.5rem 0 1rem;
-  color: var(--gray) !important;   /* Force previews to dark gray */
 }
 .post a.read-more {
   font-weight: 600;
-  color: var(--orange);
+  color: var(--orange) !important;
   text-decoration: none;
 }
 .post a.read-more:hover {
