@@ -118,6 +118,27 @@
     }
     .post a.read-more:hover { text-decoration: underline; }
 
+    /* Button to Medium */
+    .more-posts {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .more-posts a {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .more-posts a:hover {
+      background: #e46f00;
+      transform: scale(1.05);
+    }
+
     footer {
       background: var(--gray);
       color: var(--white);
@@ -150,6 +171,9 @@
       <div class="posts" id="blog-posts">
         <p>Loading latest posts...</p>
       </div>
+      <div class="more-posts">
+        <a href="https://medium.com/@VIBE_jimmy" target="_blank">Read More on Medium →</a>
+      </div>
     </div>
   </section>
 
@@ -160,12 +184,17 @@
 
   <script>
     async function loadMediumPosts() {
-      const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@VIBE_jimmy";
+      const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@VIBE_jimmy&count=10";
       try {
         const res = await fetch(feedUrl);
         const data = await res.json();
         const container = document.getElementById("blog-posts");
         container.innerHTML = "";
+
+        if (!data.items || data.items.length === 0) {
+          container.innerHTML = "<p>No posts found yet.</p>";
+          return;
+        }
 
         data.items.slice(0, 5).forEach(post => {
           const div = document.createElement("div");
