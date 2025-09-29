@@ -103,16 +103,44 @@ section h2 {
 .hero {
   text-align: center;
   padding: 6rem 1.5rem;
+
+  /* Background image setup */
+  background: url('hero-bg.png') no-repeat center center;
+  background-size: cover;
+
+  /* Minimum height so it feels like a hero banner */
+  min-height: 70vh;
+
+  /* Overlay */
+  position: relative;
+  color: var(--white);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+.hero h1,
+.hero p,
+.hero .cta {
+  position: relative;
+  z-index: 2;
 }
 .hero h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--orange) !important;   /* Force hero title orange */
+  color: var(--orange) !important;
 }
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  color: var(--white);
 }
 .hero .cta {
   background: var(--orange);
@@ -141,7 +169,7 @@ section h2 {
   background: var(--light-gray);
   border-radius: 12px;
   transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
-  color: var(--gray);   /* Always dark gray text */
+  color: var(--gray);
   border: 2px solid transparent;
   cursor: pointer;
 }
@@ -168,7 +196,7 @@ section h2 {
   color: var(--gray) !important;
 }
 .post * {
-  color: var(--gray) !important;   /* Override ALL children */
+  color: var(--gray) !important;
 }
 .post h3 {
   margin-top: 0;
@@ -242,5 +270,5 @@ footer a {
 
 /* Contact Intro Title (alt-gray) */
 section.alt-gray h2 {
-  color: var(--orange) !important;   /* Force Contact VIBE orange */
+  color: var(--orange) !important;
 }
