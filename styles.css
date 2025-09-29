@@ -104,8 +104,8 @@ section h2 {
   text-align: center;
   padding: 6rem 1.5rem;
 
-  /* Background image setup */
-  background: url('hero-bg.png') no-repeat center center !important;
+  /* Background image with fallback */
+  background: var(--gray) url('hero-bg.png') no-repeat center center !important;
   background-size: cover !important;
 
   /* Minimum height so it feels like a hero banner */
