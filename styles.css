@@ -142,6 +142,7 @@ section h2 {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   color: var(--white);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* dark gray glow */
 }
 .hero .cta {
   background: var(--orange);
