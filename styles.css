@@ -136,6 +136,7 @@ section h2 {
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--orange) !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* dark gray glow */
 }
 .hero p {
   font-size: 1.25rem;
