@@ -4,30 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VIBE | Volunteer Independent Business Exchange</title>
-
-  <!-- SEO Meta -->
-  <meta name="description" content="VIBE — Volunteer Independent Business Exchange. Your independent partner for sales, strategy, and growth.">
-  <meta name="keywords" content="VIBE, business exchange, sales consulting, B2B growth, Chattanooga, strategy">
-  <meta name="author" content="Jimmy Atkins">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="VIBE | Volunteer Independent Business Exchange">
-  <meta property="og:description" content="Your independent partner for sales, strategy, and growth.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vib.exchange">
-  <meta property="og:image" content="https://vib.exchange/favicon.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Fonts & Styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="logo">VIBE</div>
-    <nav aria-label="Main navigation">
+    <nav>
       <a href="index.html">Home</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
@@ -36,22 +21,23 @@
 
   <div class="divider"></div>
 
-  <!-- Hero -->
-  <section class="alt-gray hero">
-    <div class="content">
-      <h1>Volunteer Independent Business Exchange</h1>
-      <p>Your independent partner for sales, strategy, and growth.</p>
-      <a href="contact.html" class="cta">Contact VIBE</a>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero alt-gray">
+    <h1>
+      Volunteer Independent<br>
+      Business Exchange
+    </h1>
+    <p>Your independent partner for sales, strategy, and growth.</p>
+    <a href="contact.html" class="cta">Contact VIBE</a>
   </section>
 
   <div class="divider"></div>
 
-  <!-- About -->
+  <!-- What is VIBE -->
   <section class="alt-white">
     <div class="content">
       <h2>What is VIBE?</h2>
-      <p style="text-align:center; max-width:700px; margin:0 auto;">
+      <p>
         At VIBE, we represent brands, connect businesses, and consult with companies to solve unique challenges. 
         Our focus is on building mutually beneficial B2B relationships that drive measurable growth.
       </p>
@@ -75,36 +61,42 @@
 
   <div class="divider"></div>
 
-  <!-- CTA -->
+  <!-- Work With VIBE -->
   <section class="alt-white">
-    <div class="content" style="text-align:center;">
+    <div class="content">
       <h2>Work With VIBE</h2>
-      <p style="max-width:700px; margin:0 auto 2rem;">
+      <p>
         Interested in working with us or learning more? Let’s connect and explore how VIBE can help you grow.
       </p>
-      <a href="contact.html" class="cta">Contact VIBE</a>
+      <div style="text-align:center;">
+        <a href="contact.html" class="cta">Contact VIBE</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div class="logo">VIBE</div>
     © 2025 VIBE — Volunteer Independent Business Exchange · 
     <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
   </footer>
 
-  <!-- Sliding Divider Script -->
   <script>
+    // Divider scroll animation
     const dividers = document.querySelectorAll('.divider');
-    window.addEventListener('scroll', () => {
-      dividers.forEach(div => {
-        const rect = div.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          div.classList.add('hidden');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('hidden');
         } else {
-          div.classList.remove('hidden');
+          entry.target.classList.add('hidden');
         }
       });
+    }, { threshold: 0.1 });
+
+    dividers.forEach(divider => {
+      divider.classList.add('hidden');
+      observer.observe(divider);
     });
   </script>
+
 </body>
 </html>
