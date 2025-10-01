@@ -3,31 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact VIBE | Volunteer Independent Business Exchange</title>
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Get in touch with VIBE — Volunteer Independent Business Exchange. Contact Jimmy Atkins for sales, strategy, and growth opportunities.">
-  <meta name="keywords" content="VIBE contact, business consulting, sales, B2B growth, Chattanooga">
-  <meta name="author" content="Jimmy Atkins">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Contact VIBE | Volunteer Independent Business Exchange">
-  <meta property="og:description" content="Get in touch with VIBE for business growth, consulting, and sales opportunities.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vib.exchange/contact.html">
-  <meta property="og:image" content="https://vib.exchange/favicon.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Fonts & Styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <title>VIBE | Contact</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="logo">VIBE</div>
-    <nav aria-label="Main navigation">
+    <nav>
       <a href="index.html">Home</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact Us</a>
@@ -36,47 +21,34 @@
 
   <div class="divider"></div>
 
-  <!-- Intro -->
+  <!-- Contact Section -->
   <section class="alt-gray">
-    <div class="content" style="text-align:center;">
+    <div class="content">
       <h2>Contact VIBE</h2>
-      <p>We’d love to hear from you. Reach out and let’s explore how we can work together.</p>
+      <p>Reach out and let’s connect.</p>
+      <p><strong>Jimmy Atkins</strong></p>
+      <p><a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a></p>
+      <p><strong>Phone:</strong> 423-653-6235</p>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- Contact Details -->
+  <!-- Social Media Section -->
   <section class="alt-white">
-    <div class="content" style="text-align:center;">
-      <h2>Get in Touch</h2>
-      <p style="margin-bottom: 1rem;"><strong>Name:</strong> Jimmy Atkins</p>
-      <p style="margin-bottom: 1rem;"><strong>Email:</strong> <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a></p>
-      <p style="margin-bottom: 1rem;"><strong>Phone:</strong> <a href="tel:+14236536235">423-653-6235</a></p>
-      <p style="margin-bottom: 1rem;"><strong>Organization:</strong> Volunteer Independent Business Exchange</p>
-      <p style="margin-bottom: 1rem;"><strong>Website:</strong> <a href="https://vib.exchange" target="_blank">vib.exchange</a></p>
+    <div class="content">
+      <h2>Social Media</h2>
+      <p>Connect with VIBE on LinkedIn:</p>
+      <a href="https://www.linkedin.com/in/jimmyatkins" target="_blank">
+        <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon">
+      </a>
     </div>
   </section>
 
   <footer>
-    <div class="logo">VIBE</div>
     © 2025 VIBE — Volunteer Independent Business Exchange · 
     <a href="mailto:jimmy@vib.exchange">jimmy@vib.exchange</a>
   </footer>
 
-  <!-- Sliding Divider Script -->
-  <script>
-    const dividers = document.querySelectorAll('.divider');
-    window.addEventListener('scroll', () => {
-      dividers.forEach(div => {
-        const rect = div.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          div.classList.add('hidden');
-        } else {
-          div.classList.remove('hidden');
-        }
-      });
-    });
-  </script>
 </body>
 </html>

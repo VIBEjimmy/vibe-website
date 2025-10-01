@@ -178,6 +178,10 @@ section h2 {
   color: var(--gray);
   border: 2px solid transparent;
   cursor: pointer;
+  text-decoration: none; /* keep cards that are links clean */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card:hover {
   transform: translateY(-4px);
@@ -277,4 +281,21 @@ footer a {
 /* Contact Intro Title (alt-gray) */
 section.alt-gray h2 {
   color: var(--orange) !important;
+}
+
+/* Social Media Icons */
+.social-icon {
+  width: 40px;   /* desktop size */
+  height: 40px;
+  margin-top: 1rem;
+  transition: transform 0.2s ease;
+}
+.social-icon:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .social-icon {
+    width: 32px;  /* mobile size */
+    height: 32px;
+  }
 }
