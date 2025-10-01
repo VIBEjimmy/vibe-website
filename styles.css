@@ -301,6 +301,10 @@ section.alt-gray h2 {
 .work-with p {
   margin-bottom: 1.5rem;
 }
+.work-with .cta {
+  display: inline-block;
+  margin: 0 auto;
+}
 
 /* Social Media Icons */
 .social-icon {
