@@ -138,7 +138,7 @@ section h2 {
   color: var(--orange) !important;
   text-shadow: 
     2px 2px 6px rgba(0, 0, 0, 0.9),
-    0 0 12px rgba(0, 0, 0, 0.8); /* stronger double-layered glow */
+    0 0 12px rgba(0, 0, 0, 0.8);
 }
 .hero p {
   font-size: 1.25rem;
@@ -146,7 +146,7 @@ section h2 {
   color: var(--white);
   text-shadow: 
     2px 2px 6px rgba(0, 0, 0, 0.9),
-    0 0 12px rgba(0, 0, 0, 0.8); /* stronger double-layered glow */
+    0 0 12px rgba(0, 0, 0, 0.8);
 }
 .hero .cta {
   background: var(--orange);
@@ -178,7 +178,7 @@ section h2 {
   color: var(--gray);
   border: 2px solid transparent;
   cursor: pointer;
-  text-decoration: none; /* keep cards that are links clean */
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,8 +201,6 @@ section h2 {
   border-radius: 10px;
   border: 2px solid transparent;
   transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
-
-  /* FORCE all text to dark gray */
   color: var(--gray) !important;
 }
 .post * {
@@ -283,9 +281,17 @@ section.alt-gray h2 {
   color: var(--orange) !important;
 }
 
+/* Social Media Section */
+.social-media {
+  text-align: center;
+}
+.social-media p {
+  margin-bottom: 1rem;
+}
+
 /* Social Media Icons */
 .social-icon {
-  width: 40px;   /* desktop size */
+  width: 40px;
   height: 40px;
   margin-top: 1rem;
   transition: transform 0.2s ease;
@@ -295,7 +301,7 @@ section.alt-gray h2 {
 }
 @media (max-width: 768px) {
   .social-icon {
-    width: 32px;  /* mobile size */
+    width: 32px;
     height: 32px;
   }
 }
