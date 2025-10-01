@@ -281,6 +281,14 @@ section.alt-gray h2 {
   color: var(--orange) !important;
 }
 
+/* Contact Info Section */
+.contact-info {
+  text-align: center;
+}
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
 /* Social Media Section */
 .social-media {
   text-align: center;
