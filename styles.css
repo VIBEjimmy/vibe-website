@@ -103,12 +103,9 @@ section h2 {
 .hero {
   text-align: center;
   padding: 6rem 1.5rem;
-
   background: var(--gray) url('hero-bg.png') no-repeat center center !important;
   background-size: cover !important;
-
   min-height: 70vh;
-
   position: relative;
   color: var(--white);
 }
@@ -187,78 +184,6 @@ section h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Blog posts */
-.posts {
-  display: grid;
-  gap: 2rem;
-}
-.post {
-  background: var(--light-gray);
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
-  color: var(--gray) !important;
-}
-.post * {
-  color: var(--gray) !important;
-}
-.post h3 {
-  margin-top: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.3rem;
-}
-.post h3 a {
-  color: var(--orange) !important;
-  text-decoration: none;
-}
-.post h3 a:hover {
-  text-decoration: underline;
-}
-.post .date {
-  font-size: 0.9rem;
-  color: #777 !important;
-  margin-bottom: 0.5rem;
-}
-.post:hover {
-  transform: translateY(-4px);
-  background: #eaeaea;
-  border: 2px solid var(--orange);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.post p {
-  margin: 0.5rem 0 1rem;
-}
-.post a.read-more {
-  font-weight: 600;
-  color: var(--orange) !important;
-  text-decoration: none;
-}
-.post a.read-more:hover {
-  text-decoration: underline;
-}
-
-/* Button to Medium */
-.more-posts {
-  text-align: center;
-  margin-top: 2rem;
-}
-.more-posts a {
-  display: inline-block;
-  background: var(--orange);
-  color: var(--white);
-  padding: 0.9rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.more-posts a:hover {
-  background: #e46f00;
-  transform: scale(1.05);
-}
-
 /* Footer */
 footer {
   background: var(--gray);
@@ -271,11 +196,6 @@ footer a {
   color: var(--orange);
   text-decoration: none;
   font-weight: 600;
-}
-
-/* Contact Intro Title (alt-gray) */
-section.alt-gray h2 {
-  color: var(--orange) !important;
 }
 
 /* Contact Info Section */
@@ -304,6 +224,25 @@ section.alt-gray h2 {
 .work-with .cta {
   display: inline-block;
   margin: 0 auto;
+}
+
+/* Manufacturer Partner Section */
+.manufacturer-partner {
+  text-align: center;
+}
+.partner-logo {
+  width: 250px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease;
+}
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+.manufacturer-partner p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 /* Social Media Icons */
