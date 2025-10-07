@@ -261,8 +261,3 @@ footer a {
     height: 32px;
   }
 }
-
-/* Visited link color fix */
-a:visited {
-  color: currentColor;
-}
