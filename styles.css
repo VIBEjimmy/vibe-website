@@ -261,3 +261,8 @@ footer a {
     height: 32px;
   }
 }
+
+/* Visited link behavior */
+a:visited {
+  color: inherit;
+}
