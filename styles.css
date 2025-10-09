@@ -35,6 +35,7 @@ header .logo {
   font-weight: 700;
   font-size: 1.6rem;
   color: var(--orange);
+  text-decoration: none;
 }
 nav {
   display: flex;
@@ -157,6 +158,24 @@ section h2 {
   transform: scale(1.05);
 }
 
+/* LinkedIn Buttons */
+.linkedin-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta.secondary {
+  background: transparent;
+  border: 2px solid var(--orange);
+  color: var(--orange);
+}
+.cta.secondary:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
 /* Cards */
 .grid {
   display: grid;
@@ -260,4 +279,9 @@ footer a {
     width: 32px;
     height: 32px;
   }
+}
+
+/* Visited link color fix */
+a:visited {
+  color: currentColor;
 }
